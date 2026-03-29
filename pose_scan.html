@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <center>
+        <title>Pose detection</title>
+    </center>
+</head>
+
+<body>
+
+    <h2>Pose detection Scanner</h2>
+
+    <!-- อัปโหลด -->
+    <center>
+        <input type="file" id="upload" accept="image/*">
+        <button onclick="scanImage()">Scan Image</button>
+
+        <br><br>
+
+        <!-- กล้อง -->
+
+        <video id="video" width="300" height="300" autoplay></video>
+        <button onclick="startCamera()">Start Camera</button>
+
+        <br><br>
+
+        <video class="input_video5" width="300" height="300" autoplay></video>
+        <canvas class="output5" width="300" height="300"></canvas>
+        <div class="control5"></div>
+        <div class="loading">Waiting...</div>
+    </center>
+
+
+    <!-- MediaPipe -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.2/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.2/pose.js"></script>
+    <script src="pose_scan.js"></script>
+</body>
+
+</html>
