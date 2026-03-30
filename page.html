@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Detection</title>
+  <link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <div class="box">
+      <h2>Face Mesh Scanner</h2>
+
+      <input type="file" id="upload" accept="image/*">
+      <button onclick="scanfaceImage()">Scan Image</button>
+
+      <br><br>
+
+      <video id="video" width="400" height="300" autoplay></video>
+      <button onclick="startfaceCamera()">Start Camera</button>
+
+      <br><br>
+
+      <canvas id="canvas" width="400" height="300"></canvas>
+    </div>
+
+
+    <div class="box">
+      <h2>Posture Scanner</h2>
+
+      <input type="file" id="upload_posture" accept="image/*">
+      <button onclick="scanposeImage()">Scan Image</button>
+
+      <br><br>
+
+      <video id="input_video" width="400" height="300" autoplay playsinline></video>
+      <button onclick="startposeCamera()">Start Camera</button>
+
+      <br><br>
+
+      <canvas id="output_canvas" width="400" height="300"></canvas>
+    </div>
+
+  </div>
+
+
+  <!-- MediaPipe Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+
+  <script src="face_sacn.js"></script>
+  <script src="pose_scan.js"></script>
+
+</body>
+
+</html>
