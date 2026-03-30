@@ -30,7 +30,7 @@ function onResults(results) {
 
   if (results.multiFaceLandmarks) {
     results.multiFaceLandmarks.forEach(landmarks => {
-      
+
       landmarks.forEach(point => {
         const x = point.x * canvas.width;
         const y = point.y * canvas.height;
@@ -45,7 +45,7 @@ function onResults(results) {
   }
 }
 
-function scanImage() {
+function scanfaceImage() {
   const fileInput = document.getElementById("upload");
   const file = fileInput.files[0];
 
@@ -59,7 +59,7 @@ function scanImage() {
   };
 }
 
-function startCamera() {
+function startfaceCamera() {
   const camera = new Camera(video, {
     onFrame: async () => {
       await faceMesh.send({ image: video });
