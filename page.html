@@ -14,17 +14,24 @@
     <div class="box">
       <h2>Face Mesh Scanner</h2>
 
+      <!-- อัปโหลด -->
       <input type="file" id="upload" accept="image/*">
-      <button onclick="scanfaceImage()">Scan Image</button>
+      <button onclick="scanImage()">Scan Image</button>
 
       <br><br>
 
+      <!-- กล้อง -->
       <video id="video" width="400" height="300" autoplay></video>
-      <button onclick="startfaceCamera()">Start Camera</button>
+      <button onclick="startCamera()">Start Camera</button>
+
+
 
       <br><br>
-
+      <h2>Image</h2>
       <canvas id="canvas" width="400" height="300"></canvas>
+
+      <button onclick="Check()">Check</button>
+      <button onclick="Line()">Line</button>
     </div>
 
 
@@ -41,6 +48,9 @@
 
       <br><br>
 
+      <button onclick="selectArm('left')">Left Arm</button>
+      <button onclick="selectArm('right')">Right Arm</button>
+      <br><br>
       <canvas id="output_canvas" width="400" height="300"></canvas>
     </div>
 
